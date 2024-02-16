@@ -1,1 +1,1 @@
-Chat with my thedis
+Chat with my thesis
