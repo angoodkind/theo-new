@@ -1,9 +1,11 @@
 import streamlit as st
 import openai
 
+from llama_index.core import SimpleDirectoryReader
+
+from llama_index.core.indices.service_context import ServiceContext
+
 from llama_index import (
-    SimpleDirectoryReader,
-    ServiceContext,
     OpenAIEmbedding,
     PromptHelper,
     VectorStoreIndex,
@@ -15,7 +17,7 @@ from llama_index.core.node_parser import SentenceSplitter
 
 # from pinecone import Pinecone
 # from llama_index.vector_stores import PineconeVectorStore
-from llama_index.storage.storage_context import StorageContext
+# from llama_index.storage.storage_context import StorageContext
 
 
 st.set_page_config(page_title="Theo The Thesis Chatbot", 
