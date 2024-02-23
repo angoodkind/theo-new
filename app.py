@@ -2,18 +2,20 @@ import streamlit as st
 import openai
 
 from llama_index.core import SimpleDirectoryReader
-
 from llama_index.core.indices.service_context import ServiceContext
-
-from llama_index import (
-    OpenAIEmbedding,
-    PromptHelper,
-    VectorStoreIndex,
-    set_global_service_context,
-    Document,
-)
+from llama_index.core.indices.prompt_helper import PromptHelper
+from llama_index.core.indices.vector_store.base import VectorStoreIndex
 from llama_index.llms.openai import OpenAI
+from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
+
+# from llama_index import (
+    # OpenAIEmbedding,
+    # PromptHelper,
+    # VectorStoreIndex,
+    # set_global_service_context,
+    # Document,
+# )
 
 # from pinecone import Pinecone
 # from llama_index.vector_stores import PineconeVectorStore
